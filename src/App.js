@@ -77,7 +77,7 @@ const App = () => {
             if (cpf.length === 11){
                 console.log("é 11");
                 const back = await axios.get('https://gama-git-gerln.herokuapp.com/find', { params: { cpf }});
-                if(back){
+                if(back.status === 500){
                     setForm({...form, cpf: ''});
                     alert('CPF já cadastrado');
                     setForm({...form, cpf: ''});
