@@ -53,7 +53,7 @@ const App = () => {
         console.log(cpf);
         if(isNum(cpf)){
             console.log("é número");
-            if (cpf.lenght !== 11){
+            if (cpf.length === 11){
                 console.log("é 11");
                 const back = await axios.get('http://gama-git-gerln.herokuapp.com/find', { params: { cpf }});
                 if(back){
