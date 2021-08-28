@@ -50,7 +50,7 @@ const App = () => {
     
     const buscaCPF = async (cpf) => {
         if(isNum(cpf)){
-            if (cpf.lenght < 11){
+            if (cpf.lenght <= 10){
                 const back = await axios.get('https://gama-git-gerln.herokuapp.com/find', { params: { cpf }});
                 if(back){
                     setForm({...form, cpf: ''});
