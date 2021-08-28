@@ -49,8 +49,12 @@ const App = () => {
     }
     
     const buscaCPF = async (cpf) => {
+        console.log("aqui");
+        console.log(cpf);
         if(isNum(cpf)){
-            if (cpf.lenght <= 10){
+            console.log("é número");
+            if (cpf.lenght !== 11){
+                console.log("é 11");
                 const back = await axios.get('https://gama-git-gerln.herokuapp.com/find', { params: { cpf }});
                 if(back){
                     setForm({...form, cpf: ''});
@@ -58,10 +62,12 @@ const App = () => {
                     setForm({...form, cpf: ''});
                 }
             }else{
+                console.log("não pega o tamanho");
                 setForm({...form, cpf: ''});
                 alert('CPF inválido');
             }
         }else{
+            console.log("não reconhece como número");
             setForm({...form, cpf: ''});
             alert('CPF possui caracteres inválidos');
             setForm({...form, cpf: ''});
