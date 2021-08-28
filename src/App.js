@@ -48,34 +48,13 @@ const App = () => {
         }        
     }
     
-/*     const buscaCPF = async (cpf) => {
-        console.log("aqui");
-        const coisa = await fetch('https://gama-git-gerln.herokuapp.com/find', {cpf}).then(function(response) {
-            console.log(coisa);
-            console.log("fetch");
-            if (!response.ok) {
-                console.log("n ok");
-                throw Error(response.statusText);
-            }
-            // Read the response as json.
-            console.log("s ok");
-            return response.json();
-        }).then(function(responseAsJson) {
-            console.log("qualquer coisa");
-            // Do stuff with the JSON
-            console.log(responseAsJson);
-        }).catch(function(error) {
-            console.log('Looks like there was a problem: \n', error);
-        });
-    } */
 
     const buscaCPF = async (cpf) => {
-        console.log("aqui");
-        console.log(cpf);
+        
         if(isNum(cpf)){
-            console.log("é número");
+            
             if (cpf.length === 11){
-                console.log("é 11");
+                
                 const back = await axios.get('https://gama-git-gerln.herokuapp.com/find', { params: { cpf }});
                 if(back.status === 500){
                     setForm({...form, cpf: ''});
@@ -83,12 +62,12 @@ const App = () => {
                     setForm({...form, cpf: ''});
                 }
             }else{
-                console.log("não pega o tamanho");
+                
                 setForm({...form, cpf: ''});
                 alert('CPF inválido');
             }
         }else{
-            console.log("não reconhece como número");
+            
             setForm({...form, cpf: ''});
             alert('CPF possui caracteres inválidos');
             setForm({...form, cpf: ''});
