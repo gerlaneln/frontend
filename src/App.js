@@ -48,7 +48,7 @@ const App = () => {
         }        
     }
     
-    const buscaCPF = async (cpf) => {
+/*     const buscaCPF = async (cpf) => {
         console.log("aqui");
         const coisa = await fetch('https://gama-git-gerln.herokuapp.com/find', {cpf}).then(function(response) {
             console.log(coisa);
@@ -67,9 +67,9 @@ const App = () => {
         }).catch(function(error) {
             console.log('Looks like there was a problem: \n', error);
         });
-    }
+    } */
 
-   /*  const buscaCPF = async (cpf) => {
+    const buscaCPF = async (cpf) => {
         console.log("aqui");
         console.log(cpf);
         if(isNum(cpf)){
@@ -95,7 +95,7 @@ const App = () => {
         }
         
         
-    } */
+    } 
 
     const criarCurriculo = async (candidato) => {
         //console.log(form);
