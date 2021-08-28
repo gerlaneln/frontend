@@ -1,6 +1,5 @@
 import logo from './jobsNET.svg';
 import './style.css';
-//import './cep.js';
 import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -72,7 +71,6 @@ const App = () => {
             alert('CPF possui caracteres inválidos');
             setForm({...form, cpf: ''});
         }
-        
         
     } 
 
