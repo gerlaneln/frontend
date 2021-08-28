@@ -50,6 +50,26 @@ const App = () => {
     
     const buscaCPF = async (cpf) => {
         console.log("aqui");
+        fetch('https://gama-git-gerln.herokuapp.com/find', cpf).then(function(response) {
+            console.log("fetch");
+            if (!response.ok) {
+                console.log("n ok");
+                throw Error(response.statusText);
+            }
+            // Read the response as json.
+            console.log("s ok");
+            return response.json();
+        }).then(function(responseAsJson) {
+            console.log("qualquer coisa");
+            // Do stuff with the JSON
+            console.log(responseAsJson);
+        }).catch(function(error) {
+            console.log('Looks like there was a problem: \n', error);
+        });
+    }
+
+   /*  const buscaCPF = async (cpf) => {
+        console.log("aqui");
         console.log(cpf);
         if(isNum(cpf)){
             console.log("é número");
@@ -74,7 +94,7 @@ const App = () => {
         }
         
         
-    }
+    } */
 
     const criarCurriculo = async (candidato) => {
         //console.log(form);
