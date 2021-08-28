@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    column-gap: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+img{
+    width: 400px;
+    height: auto;
+    margin-top: 2em;
+}
+
+.required:after {
+    content:" *"; 
+    color: red;
+}
+
+#form{
+    justify-content: left;
+    border-radius: .75em;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
+    background-color: #ccddff;
+}
+
+fieldset{
+    margin: 1em;
+    border: none;
+    border-radius: .75em;
+    background-color: white;
+}
+
+.buscaCPF{
+    width: 100%;
+    height: 3em;
+    text-align: center;
+}
+
+.grid-item{
+    margin-bottom: 1rem;
+}
+
+label{
+    padding: 5px 5px;
+    box-sizing: border-box;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid #6699ff;
+    height: 1.5rem;
+
+    width: 95%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    /*box-sizing: border-box;*/
+}
+
+input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #003399;
+}
+
+input:active{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #003399;
+}
+
+input:hover{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #003399;
+}
+
+.dataInput{
+    width: 10em;
+}
+
+.cepInput{
+    width: 10em;
+}
+
+.estadoInput{
+    width: 6em;
+}
+
+.numeroInput{
+    width: 7em;
+}
+
+.telFixoInp{
+    width: 15em;
+}
+
+.celularInp{
+    width: 15em;
+}
+
+select{
+    width: 10em;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+#selecionar{
+    border: none;
+    border-bottom: 2px solid #6699ff;
+    font-size: .9em;
+    padding: .2rem;
+    margin-right: 7px;
+}
+
+#selecionar:hover{
+    border-bottom: 2px solid #003399;
+}
+
+#selecionar:focus{
+    outline: none;
+}
+
+#selecionar:active{
+    outline: none;
+}
+
+.buttondiv{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10px;
+}
+
+button{
+    padding: 0.8em;
+    width: 9em;
+    font-size: 0.9em;
+    border: 2px solid #6699ff;
+    border-radius: .90em;
+    background-color: white;
+}
+
+button:hover{
+    border: 2px solid #003399;
+}
+
+footer{
+    margin-top: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #6699ff;
+}
+
+a{
+    font-family: 'Sacramento', cursive;
+    color: black;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+#sign{
+    font-family: 'Sacramento', cursive;
+}
