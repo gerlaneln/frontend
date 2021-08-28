@@ -51,7 +51,7 @@ const App = () => {
     const buscaCPF = async (cpf) => {
         if(isNum(cpf)){
             if (cpf.lenght < 11){
-                const back = await axios.get('http://localhost:8080/find', { params: { cpf }});
+                const back = await axios.get('https://gama-git-gerln.herokuapp.com/find', { params: { cpf }});
                 if(back){
                     setForm({...form, cpf: ''});
                     alert('CPF já cadastrado');
@@ -73,7 +73,7 @@ const App = () => {
     const criarCurriculo = async (candidato) => {
         //console.log(form);
         try {
-            const be = await axios.post('http://localhost:8080/register', form);
+            const be = await axios.post('https://gama-git-gerln.herokuapp.com/register', form);
             if (be.status === 200) {
                 alert('Currículo cadastrado com sucesso.');
                 setForm({cpf: '',
