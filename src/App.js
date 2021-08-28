@@ -28,7 +28,7 @@ const App = () => {
     });
 
     const isNum = (num) => /^[0-9]+$/.test(num);
-    const cepValido = (cep) => cep.length == 8 && isNum(cep);
+    const cepValido = (cep) => cep.length === 8 && isNum(cep);
 
     const fetchAddress = async () => {
         
@@ -304,7 +304,7 @@ const App = () => {
                 </div>
             </div>
             <footer>
-            <p>Copyright &copy; JobsNET. Made by <a href="https://github.com/gerlaneln" id="sign" target="_blank">gerlaneln</a>.</p>
+            <p>Copyright &copy; JobsNET. Made by <a href="https://github.com/gerlaneln" id="sign" target="_blank" rel="noreferrer">gerlaneln</a>.</p>
             </footer>
         </>
     );
