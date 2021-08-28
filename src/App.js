@@ -50,7 +50,8 @@ const App = () => {
     
     const buscaCPF = async (cpf) => {
         console.log("aqui");
-        fetch('https://gama-git-gerln.herokuapp.com/find', cpf).then(function(response) {
+        const coisa = await fetch('https://gama-git-gerln.herokuapp.com/find', cpf).then(function(response) {
+            console.log(coisa);
             console.log("fetch");
             if (!response.ok) {
                 console.log("n ok");
